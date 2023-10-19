@@ -5,6 +5,6 @@ import './style.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App name='Faisal'/>
+    <App/>
   </React.StrictMode>,
 )
