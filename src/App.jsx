@@ -1,4 +1,6 @@
 import "./style.css";
+import CardList from "./Components/card-list/cardList.jsx";
+import SearchBox from "./Components/search-box/SearchBox";
 import { useState, useEffect } from "react";
 
 function App() {
@@ -28,20 +30,11 @@ function App() {
   });
 
   return (
-    <>
-      <input
-        className="search-box"
-        type="search"
-        placeholder="search name"
-        onChange={handleInputChange}
-      />
-      <h1>
-        Hello
-        {filterMonseters.map((e) => (
-          <li>{e.name}</li>
-        ))}{" "}
-      </h1>
-    </>
+    <div>
+      <SearchBox onChangeHandler = {handleInputChange} />
+    <h1 className="app-title">The Dumbest Monsters</h1>
+      <CardList monsters={filterMonseters} />
+    </div>
   );
 }
 
